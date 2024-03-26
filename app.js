@@ -1,13 +1,13 @@
-"use strict";
+"use strict"; // uso estrito 
 
+// Declaraciones de variables. 
 let r = 128;
 let g = 128;
 let b = 230;
-
 const boton = document.querySelector(".botonColor");
+let inputsCambiados = true; // Esto es para saber si se modifico algun input.
 
-let inputsCambiados = true;
-
+// función para registrar el valor de los imputs y definirlos en una variable.
 function registrarValor() {
     let inputs = document.querySelectorAll('.input'); 
     let lienzo = document.querySelector(".lienzo");
@@ -33,10 +33,11 @@ function registrarValor() {
     });
 }
 
+// Evento de click para crear historial de colores
 boton.addEventListener("click", () => {
     let contendor = document.querySelector(".historial");
 
-    if (inputsCambiados === true) {
+    if (inputsCambiados === true) { // creador de estructura
         let div = document.createElement("div");
         div.classList.add("elementoHistorial");
         contendor.appendChild(div);
@@ -55,11 +56,12 @@ boton.addEventListener("click", () => {
         alert("Modifica los colores para crear un historial.")
     );
 
-    if (contendor.childElementCount === 11) {
+    if (contendor.childElementCount === 11) { // Para que no se acumulen muchos elementos en el historial.
         contendor.removeChild(contendor.firstElementChild);
     }
 })
 
+// Main
 document.addEventListener("DOMContentLoaded", function() {
     registrarValor();
 })
