@@ -9,9 +9,35 @@
 </head>
 <body>
     <main>
-        <input class="input" type="range" min="0" max="255" id="input1">
-        <input class="input" type="range" min="0" max="255" id="input2">
-        <input class="input" type="range" min="0" max="255" id="input3">
+        <section class="GeneradorColor">
+            <article class="lienzo"></article>
+            <article class="sectorInputs">
+                <div class="contInput">
+                    <section class="sectionSpans flexColumn">
+                        <span>RED:</span>
+                        <span>GREEN</span>
+                        <span>BLUE</span>
+                    </section>
+
+                    <section class="sectionInputs flexColumn">
+                        <input class="input" type="range" min="0" max="255" value="128" id="input1">
+                        <input class="input" type="range" min="0" max="255" value="128" id="input2">
+                        <input class="input" type="range" min="0" max="255" value="230" id="input3">
+                    </section>
+
+                    <section class="sectionValue flexColumn">
+                        <span class="input1Value">128</span>
+                        <span class="input2Value">128</span>
+                        <span class="input3Value">230</span>
+                    </section>   
+                </div>
+                
+                <button class="botonColor">Seleccionar color</button>
+            </article>
+            <article class="historial"></article>
+
+        </section>
+        
     </main>
     <script src="app.js"></script>
 </body>
